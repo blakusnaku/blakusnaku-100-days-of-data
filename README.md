@@ -34,7 +34,7 @@ day13_sql_to_powerbi_sales_dashboard/
     └── day13_dashboard.png
 ```
 ## 🧠 Sample Day (Day 13 – Base Sales Dashboard)
-![Dashboard Preview](assets/day13_dashboard.png)
+![Dashboard Preview](day13_sql_to_powerbi_sales_dashboard/assets/day13_dashboard.png)
 
 **Highlights:**
 - SQL joins for `orders` + `customers`
