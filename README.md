@@ -53,6 +53,13 @@ day13_sql_to_powerbi_sales_dashboard/
 
 ---
 
+## ⛓️ Study Dashboard Hub
+
+This project journey builds into my **central Study Dashboard**, which you can explore here:  
+[blakusnaku-study-dashboard GitHub](https://github.com/blakusnaku/blakusnaku-study-dashboard)
+
+---
+
 ## 🔗 Future Goals
 - Automate daily dataset imports using Python scripts  
 - Add Power BI interactivity (slicers, filters)  
