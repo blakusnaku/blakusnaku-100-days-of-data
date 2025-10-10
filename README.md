@@ -16,6 +16,15 @@ Each folder represents one day of practice, following a 4-block structure:
 
 ---
 
+## 📚 Daily Projects
+
+| Day | Topic | Link |
+|-----|--------|------|
+| 13 | SQL → Power BI: Base Sales Dashboard | [Open Folder](day13_sql_to_powerbi_sales_dashboard/) |
+
+---
+
+
 ## 🧱 Folder Structure
 ```
 day13_sql_to_powerbi_sales_dashboard/
