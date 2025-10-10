@@ -20,9 +20,9 @@ Each folder represents one day of practice, following a 4-block structure:
 ```
 day13_sql_to_powerbi_sales_dashboard/
 ├── data/
-│   ├── customers.xlsx
-│   ├── orders.xlsx
-│   └── orders_customers_joined_pandas.xlsx
+│   ├── customers.csv
+│   ├── orders.csv
+│   └── orders_customers_joined_pandas.csv
 ├── scripts/
 │   ├── block1_join_orders_customers.sql
 │   ├── block2_pandas_join.py
