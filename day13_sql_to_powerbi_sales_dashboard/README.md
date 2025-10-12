@@ -1,17 +1,17 @@
-# 🧾 Day 13 — SQL to Power BI Sales Dashboard
+# 🔗 Day 13 — SQL to Power BI Sales Dashboard (Joins Practice)
 
 **Date:** October 11, 2025  
 **Phase:** Pipeline Flow  
 **Tools:** SQL • Python (pandas) • Power BI  
-**Dataset:** Custom Dummy Sales Data (Created for Practice)  
+**Dataset:** Dummy Orders & Customers Data (Self-Created)  
 **Author:** [JP Malit (blakusnaku)](https://github.com/blakusnaku)
 
 ---
 
 ## 🧩 Overview
-This project was designed to simulate a **real-world sales pipeline** using a custom-built dataset.  
-I created a dummy dataset from scratch in SQL to better understand how data structure, column relationships, and table definitions affect downstream analytics.  
-The goal was to connect raw table creation and querying directly to visualization — reinforcing end-to-end pipeline thinking.
+This project focuses on learning how to **combine relational data** using SQL joins and replicate the same process in pandas.  
+By joining an `orders` table and a `customers` table, the session explored how data relationships form the foundation of analytics pipelines.  
+The workflow ends with a **base Power BI dashboard**, visualizing joined results and validating consistency between SQL and Python outputs.
 
 ---
 
@@ -19,36 +19,37 @@ The goal was to connect raw table creation and querying directly to visualizatio
 
 | Block | Tool | Focus | Output |
 |:------|:-----|:------|:--------|
-| **Block 1** | SQL | Create dummy `orders` table, insert sample records, and perform basic SELECT, WHERE, and aggregation queries | SQLite database (`sales.db`) |
-| **Block 2** | Python (pandas) | Load SQL data, clean column names, validate types, and export a ready-for-BI CSV | `dummy_sales_cleaned.csv` |
-| **Block 3** | Power BI | Import CSV, create KPI cards, sales breakdown charts, and a simple regional dashboard | `Block3_Sales_Dashboard.pbix` |
+| **Block 1** | SQL | Perform `INNER JOIN` between `orders` and `customers` to merge customer info with order details | `orders_customers_joined` result table |
+| **Block 2** | Python (pandas) | Replicate the SQL join using `pd.merge()`; verify data integrity and export cleaned dataset | `orders_customers_joined_pandas.csv` |
+| **Block 3** | Power BI | Build a base sales dashboard using joined dataset to visualize customer-level metrics | `block3_powerbi_base_dashboard.pbix` |
 
 ---
 
 ## 🧠 Key Learnings
-- Learned to design and populate a **custom dataset** — improving understanding of schema design and data types.  
-- Practiced **query construction from scratch**, instead of relying on pre-existing data.  
-- Reinforced cleaning discipline: column naming conventions, numeric conversion, and data validation.  
-- Understood how data accuracy at the SQL level simplifies later Power BI modeling.  
-- Built confidence in handling the **full pipeline**: create → query → clean → visualize.  
+- Practiced **INNER JOIN** syntax and logic for connecting tables with shared keys.  
+- Understood the parallel between **SQL joins** and **pandas merge** — how both can achieve identical relational outcomes.  
+- Gained clarity on join types (`INNER`, `LEFT`, `RIGHT`, `OUTER`) and their impact on dataset size.  
+- Learned that keeping consistent key names and clean schemas makes cross-tool joins seamless.  
+- Built the foundation for relational modeling in Power BI using custom dummy data.
 
 ---
 
 ## 💬 Reflections
-This project felt special because it was 100 % self-built — every value and column was intentional.  
-It made me realize that building even a small dataset teaches more about structure and logic than passively using ready-made ones.  
-It also reminded me that understanding *how data is born* helps me design better analytics flows downstream.  
-The process felt like the first true rehearsal of what a real analytics workflow looks like end-to-end.  
+Day 13 was a major “click” moment — I finally saw how data connects across tools.  
+Creating two separate tables and successfully merging them in both SQL and pandas made the concept of **relationships** tangible.  
+It also reinforced how important column consistency and key matching are for smooth integrations.  
+This project served as the bridge between data cleaning and full-fledged analytics modeling.
 
 ---
 
 ## 📊 Dashboard / Deliverables Preview
-**Title:** *SQL to Power BI Sales Dashboard (Day 13)*  
+**Title:** *SQL to Power BI Sales Dashboard (Joins Practice)*  
 **Visuals:**  
-- KPI Cards: Total Sales • Total Profit • Average Order Value  
-- Bar Chart: Sales by Region  
-- Column Chart: Profit by Product Category  
-- Footer with insights and standardized format  
+![Dashboard_Preview]()
+- KPI cards: Total Sales • Total Customers • Average Order Value  
+- Table visual showing joined order-customer data  
+- Bar chart by Customer Region or Segment  
+- Footer with standardized layout  
 **Figures in ₱ (Philippine Peso)**  
 
 ---
@@ -60,8 +61,8 @@ This project journey builds into my **central Study Dashboard**, which you can e
 ---
 
 ## 🧾 Footer Info
-**Block 3 — SQL to Power BI Sales Dashboard | Day 13 | © blakusnaku analytics**  
-Dataset: *Custom Dummy Sales Data (Created for Practice)*  
+**Block 3 — SQL to Power BI Sales Dashboard (Joins Practice) | Day 13 | © blakusnaku analytics**  
+Dataset: *Dummy Orders & Customers (Self-Created)*  
 Figures in ₱ (Philippine Peso) | Power BI v2025.10  
 Created by *JP Malit | Study Project Series*
 
@@ -69,21 +70,25 @@ Created by *JP Malit | Study Project Series*
 
 ## 🗂️ File Structure
 ```
-day13_sql_to_powerbi_sales_dashboard/
+day13_joins/
 │
 ├── data/
-│ ├── dummy_sales_raw.sql
-│ ├── dummy_sales_cleaned.csv
+│ ├── orders.csv
+│ ├── customers.csv
+│ └── orders_customers_joined_pandas.csv
 │
 ├── scripts/
-│ ├── block1_create_and_query.sql
-│ ├── block2_clean_in_pandas.py
+│ ├── block1_join_orders_custoemrs.sql
+│ └── block2_pandas_join.py
 │
 ├── dashboard/
-│ ├── Block3_Sales_Dashboard.pbix
+│ └── block3_powerbi_base_dashboard.pbix
 │
 ├── notes/
-│ ├── block4_learning_log.md
+│ └── block4_learning_log.md
+│
+├── assets/
+│ └── day13_dashboard.md
 │
 └── README.md
 ```
@@ -95,4 +100,4 @@ day13_sql_to_powerbi_sales_dashboard/
 
 ---
 
-**End of Day 13 — SQL to Power BI Sales Dashboard**
+**End of Day 13 — JOINS**
