@@ -1,7 +1,0 @@
-order_id,customer_id,order_date,total_amount,customer_name,region,email
-O1001,C001,2025-09-20,1200,Anna Santos,Luzon,anna@example.com
-O1002,C002,2025-09-21,850,Ben Cruz,Visayas,ben@example.com
-O1003,C001,2025-09-22,600,Anna Santos,Luzon,anna@example.com
-O1004,C004,2025-09-23,400,David Ong,Luzon,david@example.com
-O1005,C005,2025-09-24,900,Ella Ramos,Visayas,ella@example.com
-O1006,C006,2025-09-25,1500,,,
