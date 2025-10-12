@@ -11,7 +11,7 @@
 ## 🧩 Overview
 This project explores **profit margin simulation and comparison** using the Superstore dataset.  
 The workflow covers the full **data pipeline** — from SQL calculation to Python cleaning to Power BI visualization — simulating a 40% profit assumption and comparing it against actual recorded profits.
-
+ 
 ---
 
 ## ⚙️ Pipeline Flow
@@ -43,10 +43,18 @@ By keeping a consistent workflow and design identity (`© blakusnaku analytics |
 ## 📊 Dashboard Preview
 **Title:** *Profit Margin Dashboard (Day 15)*  
 **Visuals:**  
+![Dashboard Preview](assets/day15_profit_dashboard.png)
 - 4 KPI cards: Total Sales • Actual Profit • Simulated Profit (40%) • Average Difference  
 - Clustered column chart: Actual vs Simulated Profit by Category  
 - Insight section and standardized footer  
 **Figures in ₱ (Philippine Peso)**
+
+---
+
+## ⛓️ Study Dashboard Hub
+
+This project journey builds into my **central Study Dashboard**, which you can explore here:  
+[blakusnaku-study-dashboard GitHub](https://github.com/blakusnaku/blakusnaku-study-dashboard)
 
 ---
 
@@ -84,9 +92,10 @@ day15_profit/
 ```
 ---
 
-### 🪶 Tags
+### #Tags
 `#SQL` `#Python` `#PowerBI` `#DataCleaning` `#ProfitMargin` `#AnalyticsPipeline` `#StudyProjectSeries`  
 
 ---
+
 
 **End of Day 15 — Profit Margin Analysis**
