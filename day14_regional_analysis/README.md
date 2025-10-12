@@ -70,20 +70,26 @@ Created by *JP Malit | Study Project Series*
 
 ## 🗂️ File Structure
 ```
-day14_regional_sales/
+day14_regional_analysis/
 │
 ├── data/
-│ ├── superstore_cleaned.csv
+│ ├── superstore.csv
+│ ├── superstore_noheader.csv
+│ ├── superstore.db
+│ └── regions_summary.csv
 │
 ├── scripts/
-│ ├── block1_sql_query.sql
-│ ├── block2_python_cleaning.py
+│ ├── block1_aggregate_sales_region.sql
+│ └── block2_pandas_groupby_region.py
 │
 ├── dashboard/
-│ ├── Block3_Regional_Sales.pbix
+│ └── block3_regional_totals.pbix
 │
 ├── notes/
-│ ├── block4_learning_log.md
+│ └── block4_learning_log.md
+│
+├── assets/
+│ └── day14_regional_analysis_dashboard.png
 │
 └── README.md
 ```
@@ -94,4 +100,4 @@ day14_regional_sales/
 
 ---
 
-**End of Day 14 — Regional Sales Dashboard**
+**End of Day 14 — Regional Analysis Dashboard**
