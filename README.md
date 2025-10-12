@@ -1,70 +1,62 @@
-# 🧩 SQL → Python → Power BI Journey
-**by [blakusnaku](https://github.com/blakusnaku)**
+# 📊 100 Days of Data: SQL → Python → Power BI
 
-A hands-on daily learning series connecting **data querying**, **data transformation**, and **data visualization** — from raw SQL to clean dashboards.
-
----
-
-## 📚 Overview
-Each folder represents one day of practice, following a 4-block structure:
-| Block | Focus | Tools Used |
-|-------|--------|------------|
-| 1 | Data extraction & joins | SQL (SQLite) |
-| 2 | Data transformation | Python (pandas) |
-| 3 | Visualization | Power BI |
-| 4 | Reflection | Markdown (Insights + Learnings) |
+**by blakusnaku (JP Malit)**
 
 ---
 
-## 📚 Daily Projects
+## 🧩 Overview  
+This is my **100-day learning journey** where I connect **data querying, transformation, and visualization** across SQL, Python, and Power BI. Each day is structured into four blocks:  
+1. Data extraction or joining (SQL / SQLite)  
+2. Data transformation & cleaning (Python / pandas)  
+3. Dashboard or visuals (Power BI)  
+4. Reflection & learning log (Markdown)  
 
+Projects range from dummy datasets and joins to real datasets (like Superstore) — all curated to build my analytical fluency and portfolio.
+
+---
+
+## 📅 Daily Projects  
 | Day | Topic | Link |
-|-----|--------|------|
-| 13 | SQL → Power BI: Base Sales Dashboard | [Open Folder](day13_sql_to_powerbi_sales_dashboard/) |
+|----|--------|------|
+| 13 | Joins Practice (orders + customers) | [day13_joins](./day13_joins) |
+| 14 | Regional Sales Dashboard | [day14_regional_analysis](./day14_regional_analysis) |
+| 15 | Profit Margin Analysis | [day15_profit](./day15_profit) |
+| … | … | … |
+
+*(Each link goes to that day’s folder, which contains its own README, scripts, data, dashboard, and notes.)*
 
 ---
 
+## ⛓️ Study Dashboard Hub  
+All your day projects feed into a **central Study Dashboard** — a meta view of your progress and metrics.  
+Explore it here:  
+[blakusnaku-study-dashboard](https://github.com/blakusnaku/blakusnaku-study-dashboard)
 
-## 🧱 Folder Structure
+---
+
+## 🧾 Folder Structure  
 ```
-day13_sql_to_powerbi_sales_dashboard/
-├── data/
-│   ├── customers.csv
-│   ├── orders.csv
-│   └── orders_customers_joined_pandas.csv
-├── scripts/
-│   ├── block1_join_orders_customers.sql
-│   ├── block2_pandas_join.py
-├── dashboard/
-│   └── block3_powerbi_base_dashboard.pbix
-├── notes/
-│   └── block4_learning_log.md
-└── assets/
-    └── day13_dashboard.png
+day13_joins/
+day14_regional_analysis/
+day15_profit/
+…
+README.md
+.gitignore
 ```
-## 🧠 Sample Day (Day 13 – Base Sales Dashboard)
-![Dashboard Preview](day13_sql_to_powerbi_sales_dashboard/assets/day13_dashboard.png)
-
-**Highlights:**
-- SQL joins for `orders` + `customers`
-- Pandas merge validation
-- KPI cards for Total Orders, Total Sales, Average Order Value
-- Insights integrated directly into the Power BI layout
 
 ---
 
-## ⛓️ Study Dashboard Hub
-
-This project journey builds into my **central Study Dashboard**, which you can explore here:  
-[blakusnaku-study-dashboard GitHub](https://github.com/blakusnaku/blakusnaku-study-dashboard)
-
----
-
-## 🔗 Future Goals
-- Automate daily dataset imports using Python scripts  
-- Add Power BI interactivity (slicers, filters)  
-- Create a cumulative “Weekly Summary Dashboard”  
+## 📌 Future Plans  
+- Automate dataset ingestion pipelines  
+- Add interactive features to dashboards (filters, slicers)  
+- Build weekly or monthly summary dashboards  
+- Share versioned snapshots of dashboards (v1.0, v2.0)  
 
 ---
 
-💬 *“Turning daily drills into data storytelling.”*  
+## #Tags  
+`#SQL` `#Python` `#PowerBI` `#AnalyticsPipeline` `#DataProjects` `#100DaysOfData`
+
+---
+
+“Turning daily drills into meaningful data stories.”  
