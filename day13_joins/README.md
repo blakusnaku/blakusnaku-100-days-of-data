@@ -45,7 +45,7 @@ This project served as the bridge between data cleaning and full-fledged analyti
 ## 📊 Dashboard / Deliverables Preview
 **Title:** *SQL to Power BI Sales Dashboard (Joins Practice)*  
 **Visuals:**  
-![Dashboard_Preview]()
+![Dashboard_Preview](assets/day13_dashboard.png)
 - KPI cards: Total Sales • Total Customers • Average Order Value  
 - Table visual showing joined order-customer data  
 - Bar chart by Customer Region or Segment  
