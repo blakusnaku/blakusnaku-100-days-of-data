@@ -55,8 +55,10 @@ Created by JP Malit | Study Project Series v1.0
 
 ---
 
-## 🧭 Study Dashboard Hub  
-📊 [View the Study Dashboard (Google Sheets)](https://docs.google.com/spreadsheets/d/1TLP4skR9L8p8keZBImYdIXdy1Gyl0mBcUqyHPyfwIXE/edit?usp=sharing)
+## ⛓️ Study Dashboard Hub
+This project contributes to the ongoing **Study Dashboard Series**, documenting progress across multiple data analytics disciplines.  
+View the full learning dashboard here:  
+[blakusnaku-study-dashboard GitHub](https://github.com/blakusnaku/blakusnaku-study-dashboard)
 
 ---
 
