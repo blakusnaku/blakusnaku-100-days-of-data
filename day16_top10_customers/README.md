@@ -45,7 +45,7 @@ Future sessions will explore hybrid design workflows (Power BI → Canva/Figma) 
 ## 📊 Dashboard Preview
 **Title:** *Top 10 Customers Dashboard (Day 16)*  
 **Visuals:**  
-![Dashboard Preview](assets/top10_customer_cards_v1.png)
+![Dashboard Preview](assets/top10_customer_cards.png)
 - 2×5 card grid showing customer names and total sales  
 - Standardized footer with insights, dataset info, and author credit  
 - Title → KPI grid → Footer flow (15% | 70% | 15%)  
