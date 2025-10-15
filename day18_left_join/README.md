@@ -41,7 +41,7 @@ Maintained consistent styling under the Study Dashboard v1.2 standard layout.
 ---
 
 ## 📊 Dashboard Preview
-
+![Dashboard Preview](assets/left_join_dashboard.png)
 Insights Summary:
 
 22 orders (73%) were successfully completed with no returns.
@@ -49,19 +49,11 @@ Insights Summary:
 
 ---
 
-## 🧭 Study Dashboard Hub
-
-🔗 View Live Study Dashboard (Google Sheets)
-
----
-
-## 🧾 Footer Info
-
-Block 3 — Returns vs Orders | Day 18 | © blakusnaku analytics
-Dataset: Orders & Returns Mock | Updated: 2025-10-16
-Figures in ₱ | Toolchain: SQL → Python (pandas) → Power BI
-Created by JP Malit | Study Project Series v1.2
-
+## ⛓️ Study Dashboard Hub
+This project contributes to the ongoing **Study Dashboard Series**, documenting progress across multiple data analytics disciplines.  
+View the full learning dashboard here:  
+[blakusnaku-study-dashboard GitHub](https://github.com/blakusnaku/blakusnaku-study-dashboard)
+ 
 ---
 
 ## 🗂 File Structure
@@ -69,19 +61,31 @@ Created by JP Malit | Study Project Series v1.2
 day18_left_join/
 ├── assets/
 │   └── day18_left_join_dashboard.png
+│
+├── dashboard/
+│   └── day18_left_join_dashboard.pbix
+│
 ├── data/
 │   ├── orders.csv
 │   ├── returns.csv
-│   └── orders_returns_left_join.csv
+│   ├── orders_returned_left_join.csv
+│   └── practice.db
+│
 ├── scripts/
 │   ├── block1_sql_action.sql
 │   └── block2_python_action.py
+│
 ├── notes/
 │   └── block4_learning_log.md
+│
 └── README.md
 ```
 ---
 
-## #Tags
+## #Tags 
 
 #SQL #Python #Pandas #PowerBI #LEFTJOIN #DataPipeline #100DaysOfData #BlakusnakuAnalytics
+
+---
+
+**End of Day 17 — Left Join**
