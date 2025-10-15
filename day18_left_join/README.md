@@ -80,10 +80,12 @@ day18_left_join/
 │
 └── README.md
 ```
-
-** End of Day 17 — Left Join **
 ---
 
-## #Tags
+## #Tags 
 
 #SQL #Python #Pandas #PowerBI #LEFTJOIN #DataPipeline #100DaysOfData #BlakusnakuAnalytics
+
+---
+
+**End of Day 17 — Left Join**
