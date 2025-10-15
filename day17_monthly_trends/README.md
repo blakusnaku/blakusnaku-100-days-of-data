@@ -89,5 +89,7 @@ day17_monthly_trends/
 
 #SQL #Python #Pandas #PowerBI #DataVisualization #TimeSeries #MonthlyTrends #Superstore #Blakusnaku100Days
 
+---
+
 **End of Day 17 — Monthly Trends Analysis**
 
