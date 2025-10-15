@@ -1,0 +1,31 @@
+﻿order_id,customer_name,order_date,region,sales
+O001,Alice Santos,2025-09-01,Luzon,2500
+O002,Ben Cruz,2025-09-02,Visayas,4800
+O003,Carla Ramos,2025-09-03,Luzon,5200
+O004,Diego Tan,2025-09-03,Mindanao,1900
+O005,Erika Lim,2025-09-04,Luzon,3500
+O006,Faith Uy,2025-09-04,Visayas,4100
+O007,Greg Yu,2025-09-05,Luzon,2800
+O008,Hannah Dee,2025-09-05,Mindanao,6400
+O009,Ivan dela Cruz,2025-09-06,Luzon,2000
+O010,Jenny Lee,2025-09-06,Visayas,7300
+O011,Karl Dizon,2025-09-07,Mindanao,1500
+O012,Lara Tan,2025-09-07,Luzon,5200
+O013,Mark Go,2025-09-08,Visayas,4800
+O014,Nina Ong,2025-09-08,Mindanao,5600
+O015,Owen Santos,2025-09-09,Luzon,3600
+O016,Paula Reyes,2025-09-09,Visayas,3100
+O017,Quinn Villanueva,2025-09-10,Luzon,2700
+O018,Rina Lao,2025-09-10,Mindanao,3300
+O019,Sam Bautista,2025-09-11,Luzon,2500
+O020,Tina Mendoza,2025-09-11,Visayas,4100
+O021,Ulysses Tan,2025-09-12,Luzon,2900
+O022,Vince Chua,2025-09-12,Mindanao,6200
+O023,Wendy Cruz,2025-09-13,Luzon,7000
+O024,Xander Lim,2025-09-13,Visayas,5200
+O025,Yna Valdez,2025-09-14,Mindanao,1900
+O026,Zach Uy,2025-09-14,Luzon,3400
+O027,Abel Lao,2025-09-15,Visayas,6100
+O028,Bella Tan,2025-09-15,Mindanao,4700
+O029,Cedric Ong,2025-09-16,Luzon,2800
+O030,Dana Go,2025-09-16,Visayas,4500

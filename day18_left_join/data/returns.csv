@@ -1,0 +1,9 @@
+﻿return_id,order_id,return_date,return_reason
+R001,O003,2025-09-05,Damaged item
+R002,O007,2025-09-06,Late delivery
+R003,O012,2025-09-08,Wrong product
+R004,O018,2025-09-11,Missing parts
+R005,O022,2025-09-13,Quality issue
+R006,O025,2025-09-15,Customer remorse
+R007,O027,2025-09-16,Duplicate order
+R008,O029,2025-09-17,Incomplete packaging
