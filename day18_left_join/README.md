@@ -88,4 +88,4 @@ day18_left_join/
 
 ---
 
-**End of Day 17 — Left Join**
+**End of Day 18 — Left Join**
