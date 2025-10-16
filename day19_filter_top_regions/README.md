@@ -47,7 +47,7 @@ The comparison highlights how product mix and regional dynamics affect overall s
 - Side-by-side bar comparison by category  
 - Custom footer and color branding (`#F97316` orange / `#2563EB` blue)  
 
-[Dasboard Preview](assets/dashboard_preview.png)
+![Dasboard Preview](assets/dashboard_preview.png)
 
 ---
 
@@ -101,3 +101,7 @@ day19_filter_top_regions/
 
 ## #Tags  
 #SQL #Python #Pandas #PowerBI #DataVisualization #AnalyticsJourney #100DaysOfData #BlakusnakuAnalytics
+
+---
+
+**End of Day 19 — Filter Top Regions**
