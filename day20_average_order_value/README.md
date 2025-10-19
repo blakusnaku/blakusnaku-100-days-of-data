@@ -1,6 +1,6 @@
 # 💳 Day 20 — Average Order Value Dashboard (₱)
 
-**Date:** October 19, 2025  
+**Date:** October 18, 2025  
 **Phase:** Integration & Dashboard Design  
 **Tools:** SQL • Python (pandas) • Power BI  
 **Dataset:** Superstore (Cleaned)  
