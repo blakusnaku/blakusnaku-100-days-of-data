@@ -46,8 +46,7 @@ This was a strong step toward mastering relational data pipelines and analytical
 
 ---
 
-## 📈 Dashboard Preview
-*(Insert Power BI screenshot or export here)*  
+## 📈 Dashboard Preview 
 ![Day 22 Dashboard Preview](assets/day22_multitable_dashboard.png)
 
 ---
@@ -58,9 +57,11 @@ It highlights **return rates**, **shipping cost impact**, and **sales trends**, 
 
 ---
 
-## 🧾 Study Dashboard Hub
-🔗 [View Main Study Dashboard (Google Sheets)](https://docs.google.com/spreadsheets/d/1TLP4skR9L8p8keZBImYdIXdy1Gyl0mBcUqyHPyfwIXE/edit?usp=sharing)
-
+## ⛓️ Study Dashboard Hub
+This project contributes to the ongoing **Study Dashboard Series**, documenting progress across multiple data analytics disciplines.  
+View the full learning dashboard here:  
+[blakusnaku-study-dashboard GitHub](https://github.com/blakusnaku/blakusnaku-study-dashboard)
+ 
 ---
 
 ## 🧩 Footer Info
