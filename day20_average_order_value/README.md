@@ -77,6 +77,13 @@ It also introduces the official **blakusnaku Orange color identity**, now standa
 
 ---
 
+## ⛓️ Study Dashboard Hub
+This project contributes to the ongoing **Study Dashboard Series**, documenting progress across multiple data analytics disciplines.  
+View the full learning dashboard here:  
+[blakusnaku-study-dashboard GitHub](https://github.com/blakusnaku/blakusnaku-study-dashboard)
+ 
+---
+
 ## 📁 File Structure  
 
 ```
