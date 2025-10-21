@@ -57,19 +57,19 @@ It highlights **return rates**, **shipping cost impact**, and **sales trends**, 
 
 ---
 
-## ⛓️ Study Dashboard Hub
-This project contributes to the ongoing **Study Dashboard Series**, documenting progress across multiple data analytics disciplines.  
-View the full learning dashboard here:  
-[blakusnaku-study-dashboard GitHub](https://github.com/blakusnaku/blakusnaku-study-dashboard)
- 
----
-
 ## 🧩 Footer Info
 Block 3 — Multi-Table Modeling Dashboard | **Day 22** | © blakusnaku analytics  
 Dataset: Orders + Shipping + Returns | Updated: 2025-10-21  
 Figures in ₱ (Philippine Peso) | Toolchain: SQL → Python (pandas) → Power BI  
 Created by **JP Malit** | #100DaysOfData
 
+---
+
+## ⛓️ Study Dashboard Hub
+This project contributes to the ongoing **Study Dashboard Series**, documenting progress across multiple data analytics disciplines.  
+View the full learning dashboard here:  
+[blakusnaku-study-dashboard GitHub](https://github.com/blakusnaku/blakusnaku-study-dashboard)
+ 
 ---
 
 ## 🗂️ File Structure
