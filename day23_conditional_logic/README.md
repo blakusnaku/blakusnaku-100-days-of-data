@@ -23,7 +23,7 @@ The goal was to classify orders into *High, Medium, or Low* value categories and
 
 ## 📈 Dashboard Preview
 
-![Sales Category Breakdown Dashboard](assets/day23_conditional_logic_dashboard.png)
+![Sales Category Breakdown Dashboard](assets/day23_conditional_logic_dashboard.PNG)
 
 **Dashboard Title:** *Sales Category Breakdown — Conditional Logic Demo*  
 **Core KPIs:**  
@@ -61,6 +61,13 @@ Dataset: `superstore_with_category.csv` | Updated: 2025-10-21
 Figures in ₱ (Philippine Peso) | Toolchain: SQL → Python (pandas) → Power BI  
 Created by **JP Malit** | #100DaysOfData  
 
+---
+
+## ⛓️ Study Dashboard Hub
+This project contributes to the ongoing **Study Dashboard Series**, documenting progress across multiple data analytics disciplines.  
+View the full learning dashboard here:  
+[blakusnaku-study-dashboard GitHub](https://github.com/blakusnaku/blakusnaku-study-dashboard)
+ 
 ---
 
 ## 📂 File Structure
