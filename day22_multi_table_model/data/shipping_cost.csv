@@ -1,0 +1,101 @@
+order_id,ship_mode,shipping_fee
+O-001,Standard,30.0
+O-002,Express,55.0
+O-003,Standard,25.0
+O-004,Second Class,40.0
+O-005,Standard,35.0
+O-006,Express,60.0
+O-007,Second Class,45.0
+O-008,Standard,32.0
+O-009,Express,58.0
+O-010,Standard,30.0
+O-011,Express,62.0
+O-012,Second Class,42.0
+O-013,Standard,33.0
+O-014,Express,57.0
+O-015,Standard,34.0
+O-016,Second Class,39.0
+O-017,Express,59.0
+O-018,Standard,28.0
+O-019,Standard,35.0
+O-020,Express,60.0
+O-021,Second Class,38.0
+O-022,Standard,26.0
+O-023,Express,61.0
+O-024,Standard,30.0
+O-025,Second Class,40.0
+O-026,Express,56.0
+O-027,Standard,33.0
+O-028,Second Class,37.0
+O-029,Standard,31.0
+O-030,Express,63.0
+O-031,Second Class,45.0
+O-032,Standard,30.0
+O-033,Express,60.0
+O-034,Standard,36.0
+O-035,Second Class,41.0
+O-036,Standard,29.0
+O-037,Express,58.0
+O-038,Standard,28.0
+O-039,Express,64.0
+O-040,Second Class,43.0
+O-041,Standard,35.0
+O-042,Express,62.0
+O-043,Standard,27.0
+O-044,Second Class,40.0
+O-045,Express,59.0
+O-046,Standard,29.0
+O-047,Standard,33.0
+O-048,Express,66.0
+O-049,Second Class,42.0
+O-050,Standard,31.0
+O-051,Express,55.0
+O-052,Standard,30.0
+O-053,Second Class,38.0
+O-054,Standard,34.0
+O-055,Express,65.0
+O-056,Second Class,40.0
+O-057,Standard,32.0
+O-058,Express,63.0
+O-059,Standard,36.0
+O-060,Standard,33.0
+O-061,Express,61.0
+O-062,Second Class,37.0
+O-063,Standard,30.0
+O-064,Express,58.0
+O-065,Standard,35.0
+O-066,Second Class,41.0
+O-067,Standard,29.0
+O-068,Express,60.0
+O-069,Second Class,42.0
+O-070,Standard,33.0
+O-071,Express,65.0
+O-072,Standard,30.0
+O-073,Second Class,39.0
+O-074,Standard,28.0
+O-075,Express,62.0
+O-076,Standard,35.0
+O-077,Second Class,43.0
+O-078,Standard,31.0
+O-079,Express,64.0
+O-080,Standard,34.0
+O-081,Second Class,40.0
+O-082,Standard,27.0
+O-083,Express,60.0
+O-084,Standard,32.0
+O-085,Second Class,38.0
+O-086,Standard,35.0
+O-087,Express,65.0
+O-088,Standard,33.0
+O-089,Second Class,42.0
+O-090,Standard,30.0
+O-091,Express,61.0
+O-092,Standard,29.0
+O-093,Second Class,39.0
+O-094,Standard,32.0
+O-095,Express,62.0
+O-096,Standard,34.0
+O-097,Second Class,37.0
+O-098,Standard,31.0
+O-099,Express,63.0
+O-100,Standard,30.0
