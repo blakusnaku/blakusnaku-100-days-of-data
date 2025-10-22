@@ -32,7 +32,7 @@ The focus is to align data clarity with business context — translating cleaned
 
 ## 📊 Dashboard Overview  
 
-![Superstore Dashboard v1](assets/superstore_dashboard_v1.png)
+![Superstore Dashboard v1](assets/superstore_dasboard_v1.png)
 
 | Section | Visual | Metrics | Purpose |
 |----------|---------|----------|----------|
