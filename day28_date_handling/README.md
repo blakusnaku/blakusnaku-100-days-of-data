@@ -41,7 +41,7 @@ This marks the start of the **STR Analytics Phase**, focusing on hospitality and
 **File:** `dashboard/str_dashboard_mock.pbix`  
 **Preview:**
 
-![STR Analytics Dashboard v1](assets/str_dashboard_mock_preview.png)
+![STR Analytics Dashboard v1](assets/str_dashboard_mock_preview.PNG)
 
 ---
 
