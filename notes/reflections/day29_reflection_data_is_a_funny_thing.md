@@ -44,6 +44,6 @@ Still cleaning, still learning, still iterating.
 **Date:** 2025-10-24   
 **Author:** JP Malit  
 **Repository:** blakusnaku-100-days-of-data  
-**File:** `notes/reflections/day24_reflection_data_is_a_funny_thing.md`  
+**File:** `notes/reflections/day29_reflection_data_is_a_funny_thing.md`  
 
 ---
