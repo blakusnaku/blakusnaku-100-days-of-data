@@ -66,12 +66,16 @@ day29_str_listingspipeline/
 │
 ├── data/
 │   ├── raw/
+│
 │       └── hotel_bookings_cleaned.csv
-│   └── interim/
+│
+│   ├── interim/
 │       └── hotel_bookings_snapshot.csv
-│   └── processed/
+│
+│   ├── processed/
 │       ├── bookings_cleaned.csv
 │       └── listings_cleaned.csv
+│
 │   └── external/
 │
 ├── dashboard/
