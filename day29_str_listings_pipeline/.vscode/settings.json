@@ -1,0 +1,10 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "hotel_bookings.db",
+            "database": "data/hotel_bookings.db"
+        }
+    ]
+}
