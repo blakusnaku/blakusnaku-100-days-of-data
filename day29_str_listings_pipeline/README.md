@@ -52,7 +52,8 @@ This day’s work laid the foundation for future STR dashboards by focusing on d
 --- 
 
 ## 🧭 Study Dashboard Hub
-
+This project contributes to the ongoing Study Dashboard Series, documenting progress across multiple data analytics disciplines.
+View the full learning dashboard here:  
 [🔗 View Study Dashboard v1.2](https://docs.google.com/spreadsheets/d/1TLP4skR9L8p8keZBImYdIXdy1Gyl0mBcUqyHPyfwIXE/edit?usp=sharing)
 
 ---
