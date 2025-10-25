@@ -1,11 +1,10 @@
 # 📊 Day 29 — STR Listings Pipeline
-
-**Project:** STR Analytics Transition
-**Dataset:** `hotel_bookings` (Kaggle)
-**Date (Dashboard):** 10-27-2025
-**Actual Date:** 10-25-2025
-**Author:** JP Malit @blakusnaku
-**Repository:** `blakusnaku-100-days-of-data`
+**Project:** STR Analytics Transition  
+**Dataset:** `hotel_bookings` (Kaggle)  
+**Date (Dashboard):** 10-27-2025  
+**Actual Date:** 10-25-2025  
+**Author:** JP Malit @blakusnaku  
+**Repository:** `blakusnaku-100-days-of-data`  
 
 ---
 
