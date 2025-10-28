@@ -1,0 +1,8 @@
+listing_id,property_name,city,room_type,date,available,calendar_price,adr,occupancy
+101,Cozy Loft,Manila,Entire home,01/10/2025,t,2500.0,2500.0,1.0
+101,Cozy Loft,Manila,Entire home,02/10/2025,f,2500.0,2500.0,0.0
+102,Seaside Studio,Cebu,Private room,01/10/2025,t,1800.0,1800.0,
+103,Mountain View Cabin,Tagaytay,Entire home,01/10/2025,t,3200.0,3200.0,1.0
+104,Urban Flat,Manila,Entire home,01/10/2025,f,2800.0,,0.0
+105,Garden Nook,Baguio,Shared room,01/10/2025,t,1500.0,1500.0,1.0
+101,Cozy Loft,Manila,Entire home,03/10/2025,t,2500.0,,
