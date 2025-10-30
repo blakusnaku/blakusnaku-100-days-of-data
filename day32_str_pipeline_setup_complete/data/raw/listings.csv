@@ -1,0 +1,11 @@
+listing_id,host_id,neighbourhood,room_type,accommodates,price
+1001,501,Makati,Entire home/apt,4,$120
+1002,502,BGC,Private room,2,$80
+1003,503,Taguig,Entire home/apt,6,$200
+1004,504,Quezon City,Shared room,1,$35
+1005,505,Pasig,Entire home/apt,3,$95
+1006,506,Mandaluyong,Private room,2,$70
+1007,507,Manila,Entire home/apt,5,$180
+1008,508,Pasay,Entire home/apt,2,$110
+1009,509,Alabang,Private room,2,$90
+1010,510,Ortigas,Entire home/apt,4,$150
