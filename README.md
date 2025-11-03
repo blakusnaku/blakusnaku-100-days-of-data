@@ -1,6 +1,6 @@
 # 📊 100 Days of Data: SQL → Python → Power BI
 
-**by blakusnaku (JP Malit)**
+**by blakusnaku (JP Malit)** 
 
 ---
 
