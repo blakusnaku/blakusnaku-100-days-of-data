@@ -8,13 +8,14 @@
 
 ## 🧠 Overview  
 The **US STR Pipeline** is a multi-city ETL system built using **InsideAirbnb** datasets to automate the process of cleaning, validating, merging, and transforming short-term rental data for KPI tracking.  
+
 This project simulates a real-world **analytics engineering workflow**, focusing on configuration-driven architecture, efficient file handling, and scalable data preparation for Power BI visualization.
 
 ---
 
 ## ⚙️ Architecture  
 
-```mermaid
+```
 flowchart TD
 A[Raw Data (InsideAirbnb)] --> B[Schema Validation (Python)]
 B --> C[Cleaning Stage (Numeric + Text Fields)]
@@ -40,26 +41,22 @@ F --> G[Power BI Dashboard (ADR, RevPAR, Occupancy KPIs)]
 
 ## 🧱 Features
 
-✅ Config-Driven Architecture — All paths, cities, and formats controlled through etl_config.json.
-⚙️ Dynamic Output Formats — Switch between .csv.gz and .parquet directly via config.
-🧩 Chunk-Based Merging — Handles millions of rows efficiently without RAM overload.
-⏱️ Performance Tracking — Built-in timers log merge vs. compression time.
-💾 Structured Logging — Every stage writes summary metrics to run_log.json.
-🔁 Modular & Scalable — Each block can run standalone or as a full pipeline.
+✅ Config-Driven Architecture — All paths, cities, and formats controlled through etl_config.json.  
+⚙️ Dynamic Output Formats — Switch between .csv.gz and .parquet directly via config.  
+🧩 Chunk-Based Merging — Handles millions of rows efficiently without RAM overload.  
+⏱️ Performance Tracking — Built-in timers log merge vs. compression time.  
+💾 Structured Logging — Every stage writes summary metrics to run_log.json.  
+🔁 Modular & Scalable — Each block can run standalone or as a full pipeline.   
 
 ---
 
 ## 🧮 Key Learnings
 
-The merge process itself is fast — the main bottleneck was file compression (.csv.gz).
-
-Migrating to Parquet (Snappy) made saves 5–10× faster and smaller in size.
-
-The ETL config system made city and format switching frictionless.
-
-Validation before processing avoids wasted runs and ensures reliability.
-
-Data engineering is not just about speed — it’s about building systems that adapt and scale.
+• The merge process itself is fast — the main bottleneck was file compression (.csv.gz).  
+• Migrating to Parquet (Snappy) made saves 5–10× faster and smaller in size.  
+• The ETL config system made city and format switching frictionless.   
+• Validation before processing avoids wasted runs and ensures reliability.  
+• Data engineering is not just about speed — it’s about building systems that adapt and scale.  
 
 ---
 
@@ -73,15 +70,14 @@ Data engineering is not just about speed — it’s about building systems that 
 | **36**  | Validation & Transformation *(Upcoming)* | Schema alignment checks, lightweight data validation, and Power BI integration prep.                                                                                                                                      |
 
 
-## 🧭 Study Dashboard Hub
-
-This project contributes to the ongoing *Study Dashboard Series*, documenting JP Malit’s #100DaysOfData journey across SQL, Python, Power BI, and analytics engineering.
-View the full learning dashboard here:
-🔗 blakusnaku-study-dashboard (GitHub)(https://github.com/blakusnaku/blakusnaku-study-dashboard)
+## 🧮 Study Dashboard Hub  
+> This project contributes to the ongoing **Study Dashboard Series**, documenting progress across multiple data analytics disciplines.  
+> View the full learning dashboard here:  
+> [🔗 blakusnaku-study-dashboard (GitHub)](https://github.com/blakusnaku/blakusnaku-study-dashboard)
 
 ## 📁 File Structure
 ```
-us_str_pipeline/
+us_short_term_rental_data_pipeline/
 ├── data/
 │   ├── raw/
 │   │   ├── new_york/
