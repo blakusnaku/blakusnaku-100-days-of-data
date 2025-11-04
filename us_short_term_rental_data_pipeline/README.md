@@ -91,8 +91,8 @@ us_short_term_rental_data_pipeline/
 │   ├── schema_validation.py
 │   └── cleaning_stage.py
 ├── notes/
-│   ├── block4_learning_log.md
-│   └── deferred_topics.md
+│   ├── day34_learning_log.md
+│   └── day35_learning_log.md
 ├── etl_config.json
 └── README.md
 ```
