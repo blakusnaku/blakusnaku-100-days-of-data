@@ -1,0 +1,36 @@
+# ============================================
+# 🧹 BLakusnaku STR Pipeline .gitignore
+# ============================================
+
+# Raw & interim data
+data/raw/
+data/interim/
+data/processed/
+
+# Logs & metadata
+logs/
+*.log
+run_log.json
+metadata.json
+
+# System & temp files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+*.ipynb_checkpoints
+
+# Environment & config files
+.env
+*.sqlite
+*.db
+
+# Power BI / Excel temporary files
+*.pbix
+*.xlsx
+*.xlsm
+~$*
+
+# VSCode / IDE settings
+.vscode/
+.idea/

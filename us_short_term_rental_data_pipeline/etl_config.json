@@ -1,0 +1,42 @@
+{
+    "project_name": "us_str_pipeline",
+    "data_path": "data/raw",
+    "output_path": "data/interim",
+    "log_path": "logs",
+    "cities": [
+        {
+            "name": "new_york",
+            "display_name": "New York City, NY",
+            "files": ["listings.csv.gz","calendar.csv.gz","neighbourhoods.csv"]
+        },
+        {
+            "name": "seattle",
+            "display_name": "Seattle, WA",
+            "files": ["listings.csv.gz", "calendar.csv.gz", "neighbourhoods.csv"]
+        },
+        {
+            "name": "portland",
+            "display_name": "Portland, OR",
+            "files": ["listings.csv.gz", "calendar.csv.gz", "neighbourhoods.csv"]
+        }
+    ],
+    "archived_datasets": [
+        {
+            "name": "los_angeles",
+            "display_name": "Los Angeles, CA",
+            "notes": "Retained for stress testing and performance benchmarking."
+        }
+    ],
+    "output_settings":{
+        "format": "parquet",
+        "compression": "snappy"
+    },
+    "log_format": {
+        "indent": 2,
+        "encoding": "utf-8",
+        "sort_keys": true,
+        "description": "Standardized JSON format for all run_log outputs across the ETL pipeline. Ensures consistent readability and lightweight file size in version control."
+    },
+    "last_updated": "2025-11-04"
+    
+}
