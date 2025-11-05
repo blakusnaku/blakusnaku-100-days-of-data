@@ -35,54 +35,59 @@ def load_csv_safe(path):
         return None, str(e)
 
 # main inspection loop
-for city in config['cities']:
-    city_name = city['name']
-    city_display = city['display_name']
-    print(f"\n Inspecting {city_display}...")
 
-    city_result = {}
-    for file in city["files"]:
-        file_path = os.path.join(config['data_path'],city_name,file)
-        df, status = load_csv_safe(file_path)
+def run_schema_validation():
+    for city in config['cities']:
+        city_name = city['name']
+        city_display = city['display_name']
+        print(f"\n Inspecting {city_display}...")
 
-        if df is not None:
-            info = {
-                "rows": int(df.shape[0]),
-                "columns": int(df.shape[1]),
-                "column_names": list(df.columns[:10]),
-                "status": status
-            }
+        city_result = {}
+        for file in city["files"]:
+            file_path = os.path.join(config['data_path'],city_name,file)
+            df, status = load_csv_safe(file_path)
 
-            # detect key columns if present
-            if "id" in df.columns:
-                info["unique_id"] = df["id"].nunique()
-            elif "listing_id" in df.columns:
-                info["unique_id"] = df["listing_id"].nunique()
+            if df is not None:
+                info = {
+                    "rows": int(df.shape[0]),
+                    "columns": int(df.shape[1]),
+                    "column_names": list(df.columns[:10]),
+                    "status": status
+                }
 
-            city_result[file] = info
+                # detect key columns if present
+                if "id" in df.columns:
+                    info["unique_id"] = df["id"].nunique()
+                elif "listing_id" in df.columns:
+                    info["unique_id"] = df["listing_id"].nunique()
 
-            # basic dtype sample
-            print(f" {file}: {df.shape[0]} rows, {df.shape[1]} cols")
+                city_result[file] = info
 
-        else:
-            city_result[file] = {"status": status}
-            
-    run_entry["cities"][city_name] = city_result
+                # basic dtype sample
+                print(f" {file}: {df.shape[0]} rows, {df.shape[1]} cols")
 
-# finalize log
-run_entry["status"] = "completed"
-os.makedirs(config['log_path'], exist_ok=True)
+            else:
+                city_result[file] = {"status": status}
+                
+        run_entry["cities"][city_name] = city_result
 
-# append the run_log.json
-if os.path.exists(log_path):
-    with open(log_path) as f:
-        log_data = json.load(f)
-else:
-    log_data = {"runs":[]}
+    # finalize log
+    run_entry["status"] = "completed"
+    os.makedirs(config['log_path'], exist_ok=True)
 
-log_data["runs"].append(run_entry)
+    # append the run_log.json
+    if os.path.exists(log_path):
+        with open(log_path) as f:
+            log_data = json.load(f)
+    else:
+        log_data = {"runs":[]}
 
-with open(log_path,"w") as f:
-    json.dump(log_data,f,indent=2)
+    log_data["runs"].append(run_entry)
 
-print("\n Schema inspection complete! Results logged to run_log.json")
+    with open(log_path,"w") as f:
+        json.dump(log_data,f,indent=2)
+
+    print("\n Schema inspection complete! Results logged to run_log.json")
+
+if __name__ == "__main__":
+    run_schema_validation()
