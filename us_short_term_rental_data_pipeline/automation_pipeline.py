@@ -17,6 +17,13 @@ from scripts.load_datasets import run_load
 from scripts.harmonize_schemas import run_harmonize
 from scripts.merge_stage import run_merge
 
+from scripts.validate_data_completeness import run_data_quality_check 
+from scripts.validate_missing_outliers import run_missing_outlier_treatment
+from scripts.validate_numeric_consistency import run_numeric_validation
+
+from scripts.calculate_kpis  import run_calculate_kpis
+from scripts.generate_kpi_summary import run_kpi_summary
+
 def main():
     print(" Starting US STR Data Pipeline\n")
 
@@ -41,5 +48,20 @@ def main():
     #step 7: run merge
     run_merge()
 
+    #step 8: check data qulity
+    run_data_quality_check()
+
+    #step 9: check for missing data and outliers
+    run_missing_outlier_treatment()
+
+    #step 10: validate numeric consistency
+    run_numeric_validation()
+
+    #step 11: calculate kpis
+    run_calculate_kpis()
+
+    #step 12: generate kpi summary
+    run_kpi_summary()
+    
 if __name__ == "__main__":
     main()

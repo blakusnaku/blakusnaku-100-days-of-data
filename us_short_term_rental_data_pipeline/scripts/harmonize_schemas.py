@@ -51,6 +51,11 @@ def run_harmonize():
         
         df = pd.read_csv(file_path)
 
+        #ensure consistent listing identifier across all cities
+        if "id" in df.columns and "listing_id" not in df.columns:
+            df.rename(columns={"id":"listing_id"}, inplace=True)
+            print(f"Renamed 'id' ➡ 'listing_id' for {city_key}")
+
         #add metadata columns
         df["city_key"] = city_key
         df["city_display"] = display
