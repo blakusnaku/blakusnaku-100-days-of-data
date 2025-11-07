@@ -52,7 +52,7 @@ def run_merge_listings_calendar():
 
             #read data
             listings_df = pd.read_csv(listings_path, low_memory = False)
-            
+
             #normalize listings key
             if "id" in listings_df.columns:
                 listings_df.rename(columns={"id": "listing_id"}, inplace = True)
@@ -74,6 +74,8 @@ def run_merge_listings_calendar():
                         chunk.rename(columns={"id": "listing_id"}, inplace=True)
                     
                     merged_chunk = chunk.merge(listings_df, on="listing_id", how="left", validate="many_to_one")
+                    merged_chunk["city_key"] = city_name
+                    merged_chunk["city_display"] = city["display_name"]
                     row_counter += len(merged_chunk)
 
                     if output_format == "parquet":
@@ -134,7 +136,10 @@ def run_merge_listings_calendar():
                     how="left",
                     validate="many_to_one"
                 )
-                
+                # ✅ Add metadata columns
+                merged_df["city_key"] = city_name
+                merged_df["city_display"] = city["display_name"]
+
                 #track end time
                 end_time = time.perf_counter()
                 duration = end_time - start_time

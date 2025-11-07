@@ -24,8 +24,11 @@ from scripts.validate_numeric_consistency import run_numeric_validation
 from scripts.calculate_kpis  import run_calculate_kpis
 from scripts.generate_kpi_summary import run_kpi_summary
 
+from scripts.import_to_sqlite import run_import_to_sqlite
+from scripts.verify_sql_import import run_verify_import
+
 def main():
-    print(" Starting US STR Data Pipeline\n")
+    print("=== 🚀 Starting US STR Data Pipeline ===\n")
 
     #step 1: schema validation
     run_schema_validation()
@@ -62,6 +65,12 @@ def main():
 
     #step 12: generate kpi summary
     run_kpi_summary()
+
+    #step 13: import to sqlite database
+    run_import_to_sqlite()
+    
+    #step 14: verify_sql_import
+    run_verify_import()
     
 if __name__ == "__main__":
     main()
