@@ -91,7 +91,7 @@ def run_calculate_kpis():
         json.dump(logs, f, indent=INDENT, sort_keys=SORT_KEYS)
 
     print("📋 Logged KPI calculation results to run_log.json")
-    print("=== ✅ calculate_kpis.py complete ===\n\n")
+    print("=== ✅ calculate_kpis.py complete ===\n")
 
 if __name__ == "__main__":
     run_calculate_kpis()

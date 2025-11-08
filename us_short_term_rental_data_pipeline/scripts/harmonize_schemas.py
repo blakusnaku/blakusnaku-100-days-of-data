@@ -35,7 +35,7 @@ output_compression = config["output_settings"]["compression"]
 
 
 def run_harmonize():
-    print("### Harmonizing shemas and adding city columns ###")
+    print("=== 🧩 Harmonizing shemas and adding city columns ===")
 
     city_dfs = {}
 
@@ -91,7 +91,8 @@ def run_harmonize():
         df.to_csv(out_path, index=False)
         print(f"💾 Saved: {out_path}")
     
-    print("\n✅ harmonize_schemas.py complete — all listings aligned and city columns added.\n")
+    print("\nall listings aligned and city columns added.")
+    print("=== ✅ harmonize_schemas.py complete. ===\n")
     return city_dfs
 
 if __name__ == "__main__":

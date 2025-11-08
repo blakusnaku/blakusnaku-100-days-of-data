@@ -30,7 +30,7 @@ from scripts.verify_sql_import import run_verify_import
 from scripts.export_bi_dataset import run_export_bi_dataset
 
 def main():
-    print("=== 🚀 Starting US STR Data Pipeline ===\n")
+    print("=== 🚀 Starting US STR Data Pipeline ===")
 
     #step 1: schema validation
     run_schema_validation()

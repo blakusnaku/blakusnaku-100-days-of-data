@@ -32,8 +32,8 @@
         "compression": "snappy"
     },
     "pipeline_mode":{
-        "stage": "production",
-        "row_limit": null,
+        "stage": "testing",
+        "row_limit": 100000,
         "description": "Controls pipeline run mode. Options: 'testing' (uses row_limit) or 'production' (full load)"
     },
     "log_format": {

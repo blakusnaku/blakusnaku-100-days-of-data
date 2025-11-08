@@ -121,7 +121,7 @@ def run_import_to_sqlite():
 
     append_log("database_import", total_logs)
     print("\n💾 All imports commited and logged to run_log.json")
-    print("=== ✅ import_to_sqlite.py complete ===")
+    print("=== ✅ import_to_sqlite.py complete ===\n")
 
 if __name__ == "__main__":
     run_import_to_sqlite()

@@ -75,7 +75,7 @@ def run_kpi_summary():
         json.dump(logs,f,indent=INDENT, sort_keys=SORT_KEYS)
 
     print("📋 Logged city KPI summary results to run_log.json")
-    print("=== ✅ generate_kpi_summary.py complete ===")
+    print("=== ✅ generate_kpi_summary.py complete ===\n")
 
 if __name__ == "__main__":
     run_kpi_summary()

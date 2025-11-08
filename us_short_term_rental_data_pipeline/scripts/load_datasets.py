@@ -49,7 +49,7 @@ output_compression = config["output_settings"]["compression"]
 #main function
 
 def run_load():
-    print("### Multi-city load validation ###")
+    print("=== 🧩 Multi-city load validation ===")
 
     city_dfs = {}
 
@@ -65,12 +65,12 @@ def run_load():
         df = pd.read_csv(file_path)
         city_dfs[city_name] = df
 
-        print(f"\n City: {display_name}")
+        print(f"\n🏦 City: {display_name}")
         print(f"Rows: {df.shape[0]} | Columns: {df.shape[1]}")
         print(f"Columns: {list(df.columns)}")
 
     #schema consistency check
-    print("\n### Schema Consistencty Check ###")
+    print("\n=== 🧩 Schema Consistencty Check ===")
     if not city_dfs:
         print(" No city data loaded.")
         return None
@@ -83,7 +83,8 @@ def run_load():
         else:
             print(f"✅ {city_name.title()} schema matches base reference.")
     
-    print("\n load_datasets.py complete - all datasets successfully loaded \n")
+    print("\nall datasets successfully loaded")
+    print("=== ✅ load_datasets.py complete ===\n")
 
 if __name__ == "__main__":
     run_load()

@@ -74,6 +74,7 @@ def clean_numeric_fields(df):
     return df
 
 def run_clean_numeric():
+    print("=== 🧹 Cleanning Numeric Values ===")
     # initialize log entries
     log_entries = []
 
@@ -119,6 +120,7 @@ def run_clean_numeric():
         json.dump(logs,f,indent=config["log_format"]["indent"])
 
     print("Cleaned numeric/text fields saved to /data/interim/")
+    print("=== ✅ clean_numeric_stage.py complete ===\n")
 
 if __name__ == "__main__":
     run_clean_numeric()

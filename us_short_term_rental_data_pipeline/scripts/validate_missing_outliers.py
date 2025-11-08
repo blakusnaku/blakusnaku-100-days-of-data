@@ -74,6 +74,7 @@ def run_missing_outlier_treatment():
     df.to_parquet(OUTPUT_FILE, compression=config["output_settings"]["compression"], index = False)
 
     print(f"💾 Saved validated dataset ➡ {OUTPUT_FILE}") 
+    print("=== ✅ validate_missing_outliers.py complete. ===\n")
 
     return df
 

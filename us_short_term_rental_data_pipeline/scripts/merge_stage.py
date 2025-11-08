@@ -88,8 +88,9 @@ def run_merge():
         index=False
     )
 
-    print(f"💾 Saved consolidated dataset to {output_path}")
-    print("✅ merge_stage.py complete — multi-city master file ready.\n")
+    print(f"\n💾 Saved consolidated dataset to {output_path}")
+    print("multi-city master file ready.")
+    print("=== ✅ merge_stage.py complete. ===\n")
 
     return master_df
 

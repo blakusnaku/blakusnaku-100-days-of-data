@@ -37,10 +37,11 @@ def load_csv_safe(path):
 # main inspection loop
 
 def run_schema_validation():
+    print("=== 🧩 Running Schema Validation ===")
     for city in config['cities']:
         city_name = city['name']
         city_display = city['display_name']
-        print(f"\n Inspecting {city_display}...")
+        print(f"\n🏦 Inspecting {city_display}...")
 
         city_result = {}
         for file in city["files"]:
@@ -87,7 +88,8 @@ def run_schema_validation():
     with open(log_path,"w") as f:
         json.dump(log_data,f,indent=2)
 
-    print("\n Schema inspection complete! Results logged to run_log.json")
+    print("\n✅ Schema inspection complete! Results logged to run_log.json")
+    print("== ✅ schema_validation.py complete ==\n")
 
 if __name__ == "__main__":
     run_schema_validation()

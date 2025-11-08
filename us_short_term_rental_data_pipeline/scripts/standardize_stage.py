@@ -55,6 +55,7 @@ def standardize_and_dedupe(df):
     return df
 
 def run_standardize():
+    print("=== 🧹 Standardize Headers and Remove Duplicated ===")
     # initizalize log entries
     block2_logs = []
 
@@ -98,6 +99,7 @@ def run_standardize():
         json.dump(logs, f, indent= config["log_format"]["indent"], sort_keys = config["log_format"]["sort_keys"])
 
     print("Standardized headers and removed duplicates")
+    print("=== ✅ standardize_stage.py complete ===\n")
 
 if __name__ == "__main__":
     run_standardize()

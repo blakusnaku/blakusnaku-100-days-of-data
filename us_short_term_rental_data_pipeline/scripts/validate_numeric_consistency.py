@@ -73,7 +73,8 @@ def run_numeric_validation():
     #save numeric validation report
     summary.to_csv(OUTPUT_FILE, index=False)
     print(f"\n💾 Saved numeric validation report ➡ {OUTPUT_FILE}")
-    print("✅ Numeric metrics validated.\n")
+    print("Numeric metrics validated.\n")
+    print("=== ✅ validate_numeric_consistency.py complete. ===\n")
 
     return summary
 

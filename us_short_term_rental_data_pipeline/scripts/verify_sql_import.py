@@ -97,7 +97,7 @@ def run_verify_import():
 
     append_log("database_verification",results)
     print("✅ Verification results logged to run_log.json")
-    print("=== ✅ verify_sql_import.py complete ===")
+    print("=== ✅ verify_sql_import.py complete ===\n")
 
 if __name__ == "__main__":
     run_verify_import()

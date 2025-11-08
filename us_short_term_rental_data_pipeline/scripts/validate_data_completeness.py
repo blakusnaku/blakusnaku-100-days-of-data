@@ -76,7 +76,7 @@ def run_data_quality_check(threshold: float = 0.2):
     quality_df.to_csv(output_path, index = False)
 
     print(f"\n💾 Data quality report saved to {output_path}")
-    print("✅ validation_stage.py (Block 1) complete.")
+    print("=== ✅ validation_stage.py complete. ===\n")
 
     return quality_df
 

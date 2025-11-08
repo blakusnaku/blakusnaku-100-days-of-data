@@ -33,7 +33,7 @@ output_format = config["output_settings"]["format"]
 output_compression = config["output_settings"]["compression"]
 
 def run_merge_listings_calendar():
-
+    print("=== 🧩 Merge Listings and Calendar ===")
     block3_logs = []
 
     for city in config["cities"]:
@@ -59,7 +59,7 @@ def run_merge_listings_calendar():
 
             # determine file size
             calendar_size_mb = os.path.getsize(calendar_path)/(1024*1024)
-            print(f"\n {city_name.title()}: Calendar file size = {calendar_size_mb:.1f} MB")
+            print(f"\n🏦 {city_name.title()}: Calendar file size = {calendar_size_mb:.1f} MB")
 
             # chunked merge mode (for large files >50MB)
             if calendar_size_mb >20:
@@ -211,7 +211,7 @@ def run_merge_listings_calendar():
             sort_keys= config["log_format"]["sort_keys"]
         )
 
-    print("compressed mereged datasets saved to /data/processed/")
-
+    print("\ncompressed mereged datasets saved to /data/processed/")
+    print("=== ✅ merge_listings_calendar.py complete ===\n")
 if __name__ == "__main__":
     run_merge_listings_calendar()
