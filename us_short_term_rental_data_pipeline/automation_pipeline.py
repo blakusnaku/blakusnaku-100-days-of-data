@@ -27,6 +27,8 @@ from scripts.generate_kpi_summary import run_kpi_summary
 from scripts.import_to_sqlite import run_import_to_sqlite
 from scripts.verify_sql_import import run_verify_import
 
+from scripts.export_bi_dataset import run_export_bi_dataset
+
 def main():
     print("=== 🚀 Starting US STR Data Pipeline ===\n")
 
@@ -71,6 +73,9 @@ def main():
     
     #step 14: verify_sql_import
     run_verify_import()
+    
+    #step 15: export bi dataset
+    run_export_bi_dataset()
     
 if __name__ == "__main__":
     main()
