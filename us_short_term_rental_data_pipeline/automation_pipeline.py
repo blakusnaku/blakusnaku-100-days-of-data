@@ -28,7 +28,9 @@ from scripts.import_to_sqlite import run_import_to_sqlite
 from scripts.verify_sql_import import run_verify_import
 
 from scripts.export_bi_dataset import run_export_bi_dataset
-
+from scripts.inspect_str_market_data import run_inspect_str_market_data
+from scripts.standardize_numeric_fields import run_standardize_numeric_fields
+from scripts.handle_missing_outliers import run_handle_missing_outliers
 def main():
     print("=== 🚀 Starting US STR Data Pipeline ===")
 
@@ -77,5 +79,13 @@ def main():
     #step 15: export bi dataset
     run_export_bi_dataset()
     
+    #step 16: inspect str market data
+    run_inspect_str_market_data()
+
+    #step 17: standardize numeric fields
+    run_standardize_numeric_fields()
+
+    #step 18: handle missing values and detect outliers
+    run_handle_missing_outliers()
 if __name__ == "__main__":
     main()
