@@ -31,6 +31,10 @@ from scripts.export_bi_dataset import run_export_bi_dataset
 from scripts.inspect_str_market_data import run_inspect_str_market_data
 from scripts.standardize_numeric_fields import run_standardize_numeric_fields
 from scripts.handle_missing_outliers import run_handle_missing_outliers
+
+from scripts.extract_amenity_keywords import run_extract_amenity_keywords
+from scripts.analyz_amenity_impact import run_analyze_amenity_impact
+from scripts.visualize_amenity_impact import run_visualize_amenity_impact
 def main():
     print("=== 🚀 Starting US STR Data Pipeline ===")
 
@@ -87,5 +91,15 @@ def main():
 
     #step 18: handle missing values and detect outliers
     run_handle_missing_outliers()
+
+    #step 19: extract amenity keywords
+    run_extract_amenity_keywords()
+    
+    #step 20: analyze amenity impact
+    run_analyze_amenity_impact()
+
+    #step 21: visualize amenity impact
+    run_visualize_amenity_impact()
+    
 if __name__ == "__main__":
     main()
