@@ -35,6 +35,8 @@ from scripts.handle_missing_outliers import run_handle_missing_outliers
 from scripts.extract_amenity_keywords import run_extract_amenity_keywords
 from scripts.analyz_amenity_impact import run_analyze_amenity_impact
 from scripts.visualize_amenity_impact import run_visualize_amenity_impact
+from scripts.aggregate_city_kpis import run_aggergate_city_kpis
+from scripts.analyze_revpar_by_property import run_revpar_analysis
 def main():
     print("=== 🚀 Starting US STR Data Pipeline ===")
 
@@ -100,6 +102,12 @@ def main():
 
     #step 21: visualize amenity impact
     run_visualize_amenity_impact()
+
+    #step 22: aggregate city kpis
+    run_aggergate_city_kpis()
+
+    #step 23: analyze revpar by property type
+    run_revpar_analysis()
     
 if __name__ == "__main__":
     main()
