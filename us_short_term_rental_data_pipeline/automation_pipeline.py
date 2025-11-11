@@ -37,6 +37,10 @@ from scripts.analyz_amenity_impact import run_analyze_amenity_impact
 from scripts.visualize_amenity_impact import run_visualize_amenity_impact
 from scripts.aggregate_city_kpis import run_aggergate_city_kpis
 from scripts.analyze_revpar_by_property import run_revpar_analysis
+from scripts.import_parquet_to_sqlite import run_import_parquet_to_sqlite
+from scripts.verify_sql_import_analysis import run_verify_sql_import
+
+
 def main():
     print("=== 🚀 Starting US STR Data Pipeline ===")
 
@@ -108,6 +112,13 @@ def main():
 
     #step 23: analyze revpar by property type
     run_revpar_analysis()
+
+    #step 24: import parquet to sqlite
+    run_import_parquet_to_sqlite()
+    
+    #step 25: verify parquet import
+    run_verify_sql_import()
+
     
 if __name__ == "__main__":
     main()
