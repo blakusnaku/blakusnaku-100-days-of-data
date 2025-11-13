@@ -56,5 +56,6 @@ def run_import_parquet_to_sqlite():
     conn.close()
     print("=== ✅ import_parquet_to_sqlite.py completed ===")
 
+
 if __name__ == "__main__":
     run_import_parquet_to_sqlite()
