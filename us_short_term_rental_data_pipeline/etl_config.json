@@ -2,6 +2,8 @@
     "project_name": "us_str_pipeline",
     "data_path": "data/raw",
     "output_path": "data/interim",
+    "interim_path": "data/interim",
+    "processed_path": "data/processed",
     "log_path": "logs",
     "cities": [
         {
@@ -32,8 +34,8 @@
         "compression": "snappy"
     },
     "pipeline_mode":{
-        "stage": "production",
-        "row_limit": null,
+        "stage": "testing",
+        "row_limit": 100000,
         "description": "Controls pipeline run mode. Options: 'testing' (uses row_limit) or 'production' (full load)"
     },
     "log_format": {

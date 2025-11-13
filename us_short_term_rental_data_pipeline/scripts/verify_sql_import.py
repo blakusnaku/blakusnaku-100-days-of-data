@@ -32,7 +32,6 @@ INDENT = config["log_format"]["indent"]
 SORT_KEYS = config["log_format"]["sort_keys"]
 
 # connect to database
-
 def connect_db():
     if not os.path.exists(DB_PATH):
         raise FileNotFoundError(f"❌ Database not found: {DB_PATH}")

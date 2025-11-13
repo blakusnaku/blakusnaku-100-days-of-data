@@ -32,6 +32,8 @@ from scripts.inspect_str_market_data import run_inspect_str_market_data
 from scripts.standardize_numeric_fields import run_standardize_numeric_fields
 from scripts.handle_missing_outliers import run_handle_missing_outliers
 
+from scripts.init_db_schema import run_load_schema_sql
+
 from scripts.extract_amenity_keywords import run_extract_amenity_keywords
 from scripts.analyz_amenity_impact import run_analyze_amenity_impact
 from scripts.visualize_amenity_impact import run_visualize_amenity_impact
@@ -40,6 +42,9 @@ from scripts.analyze_revpar_by_property import run_revpar_analysis
 from scripts.import_parquet_to_sqlite import run_import_parquet_to_sqlite
 from scripts.verify_sql_import_analysis import run_verify_sql_import
 
+from scripts.run_sql_kpis_by_city import run_sql_kpis_by_city   
+from scripts.run_sql_kpis_by_property_type import run_sql_kpis_by_property_type
+from scripts.export_sql_kpi_results import run_eport_sql_kpis
 
 def main():
     print("=== 🚀 Starting US STR Data Pipeline ===")
@@ -83,6 +88,9 @@ def main():
     #step 13: import to sqlite database
     run_import_to_sqlite()
     
+    #initialize database schema
+    run_load_schema_sql()
+
     #step 14: verify_sql_import
     run_verify_import()
     
@@ -119,6 +127,14 @@ def main():
     #step 25: verify parquet import
     run_verify_sql_import()
 
+    #step 26: kpis by city
+    run_sql_kpis_by_city()
+    
+    #step 27: kpis by property type
+    run_sql_kpis_by_property_type()
+    
+    #step 28: export sql kpi results
+    run_eport_sql_kpis()
     
 if __name__ == "__main__":
     main()
