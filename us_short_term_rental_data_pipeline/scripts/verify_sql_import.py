@@ -24,8 +24,8 @@ CONFIG_PATH = "etl_config.json"
 with open(CONFIG_PATH,"r", encoding="utf-8") as f:
     config = json.load(f)
 
-INTERIM_DIR = config["output_path"]
-DB_PATH = os.path.join("data","str_market.db")
+INTERIM_DIR = config["interim_path"]
+DB_PATH = config["db_path"]
 LOG_FILE = os.path.join(config["log_path"],"run_log.json")
 
 INDENT = config["log_format"]["indent"]
@@ -66,11 +66,11 @@ def verify_counts(conn):
         #actual (from sqlite)
         cur = conn.cursor()
         db_listings = cur.execute(
-            "SELECT COUNT(*) FROM listings WHERE city_display = ?",
+            "SELECT COUNT(*) FROM listings_raw WHERE city_display = ?",
             (city['display_name'],)
         ).fetchone()[0]
         db_calendar = cur.execute(
-            "SELECT COUNT(*) FROM calendar WHERE city_display = ?",
+            "SELECT COUNT(*) FROM calendar_raw WHERE city_display = ?",
             (city['display_name'],)
         ).fetchone()[0]
 

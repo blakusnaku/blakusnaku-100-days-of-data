@@ -1,10 +1,18 @@
 
 import sqlite3
+import json
+
+CONFIG_PATH = "etl_config.json"
+
+#load config
+with open(CONFIG_PATH, 'r') as f:
+    config = json.load(f)
+
+DB_PATH = config['db_path']
+SCHEMA_FILE = "scripts/str_schema.sql"
 
 # call str_schema.sql
 def run_load_schema_sql():
-    DB_PATH = "data/str_market.db"
-    SCHEMA_FILE = "scripts/str_schema.sql"
 
     # Connect and execute
     conn = sqlite3.connect(DB_PATH)

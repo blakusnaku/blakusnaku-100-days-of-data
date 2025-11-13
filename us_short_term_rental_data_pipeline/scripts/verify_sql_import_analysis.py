@@ -22,8 +22,8 @@ CONFIG_PATH = "etl_config.json"
 with open(CONFIG_PATH, "r", encoding="utf-8") as f:
     config = json.load(f)
 
-PROCESSED_DIR = "data/processed"
-DB_PATH = os.path.join("data", "str_market.db")
+PROCESSED_DIR = config['processed_path']
+DB_PATH = config['db_path']
 PARQUET_FILE = os.path.join(PROCESSED_DIR, "str_market_ready.parquet")
 
 def run_verify_sql_import():

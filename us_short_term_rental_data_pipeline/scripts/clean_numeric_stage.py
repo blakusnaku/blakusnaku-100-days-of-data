@@ -38,7 +38,8 @@ with open("etl_config.json","r") as f:
     config = json.load(f)
 
 RAW_DIR = config["data_path"]
-INTERIM_DIR = config["output_path"]
+INTERIM_DIR = config["interim_path"]
+
 LOG_FILE = os.path.join(config["log_path"], "run_log.json")
 INDENT = config["log_format"]["indent"]
 SORT_KEYS = config["log_format"]["sort_keys"]

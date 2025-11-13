@@ -2,25 +2,32 @@
 -- 📦 PROJECT METADATA
 ----------------------------------------------
 -- Day: 39
--- Date: 2025-11-06
 -- Process: str_schema.sql
--- Task: Define STR database structure and relationships
--- Phase: Data Acquisition - Database Creation
+-- Purpose: Create full STR database schema (raw + clean + BI)
 -- Author: JP Malit
--- Repository: blakusnaku-100-days-of-data
 -- Database: data/str_market.db
 ----------------------------------------------
 
--- Drop existings tables (for testing runs)
+
+/*===========================================================
+  1. DROP TABLES (for testing or clean rebuild)
+===========================================================*/
+
+DROP TABLE IF EXISTS listings_raw;
+DROP TABLE IF EXISTS calendar_raw;
+DROP TABLE IF EXISTS reviews_raw;
+
 DROP TABLE IF EXISTS listings;
 DROP TABLE IF EXISTS calendar;
 DROP TABLE IF EXISTS reviews;
 
------------------------
--- TABLE: listings
------------------------
-CREATE TABLE IF NOT EXISTS listings (
-    listing_id              INTEGER PRIMARY KEY,
+
+/*===========================================================
+  2. RAW TABLES (direct imports from CSV & parquet)
+===========================================================*/
+
+CREATE TABLE IF NOT EXISTS listings_raw (
+    listing_id              INTEGER,
     city_display            TEXT,
     host_id                 INTEGER,
     host_name               TEXT,
@@ -35,9 +42,9 @@ CREATE TABLE IF NOT EXISTS listings (
     minimum_nights          INTEGER,
     maximum_nights          INTEGER,
     review_scores_rating    REAL,
-    number_of_reviewa       INTEGER,
+    number_of_reviews       INTEGER,
     latitude                REAL,
-    longtitude              REAL,
+    longitude               REAL,
     availability_365        INTEGER,
     adr                     REAL,
     occupancy_pct           REAL,
@@ -46,44 +53,88 @@ CREATE TABLE IF NOT EXISTS listings (
     city_key                TEXT
 );
 
------------------------
--- TABLE: calendar
------------------------
+CREATE TABLE IF NOT EXISTS calendar_raw (
+    listing_id          INTEGER,
+    date                TEXT,
+    available           TEXT,
+    price               REAL,
+    adjusted_price      REAL,
+    minimum_nights      INTEGER,
+    maximum_nights      INTEGER,
+    city_key            TEXT,
+    city_display        TEXT
+);
+
+CREATE TABLE IF NOT EXISTS reviews_raw (
+    review_id       INTEGER,
+    listing_id      INTEGER,
+    reviewer_id     INTEGER,
+    reviewer_name   TEXT,
+    comments        TEXT,
+    date            TEXT,
+    city_key        TEXT,
+    city_display    TEXT
+);
+
+
+/*===========================================================
+  3. CLEAN / BI-READY TABLES (after transformations)
+===========================================================*/
+
+CREATE TABLE IF NOT EXISTS listings (
+    listing_id              INTEGER PRIMARY KEY,
+    city_display            TEXT,
+    property_type           TEXT,
+    room_type               TEXT,
+    price                   REAL,
+    adr                     REAL,
+    revpar                  REAL,
+    occupancy_pct           REAL,
+    los                     REAL,
+    review_scores_rating    REAL,
+    beds                    REAL,
+    bedrooms                REAL,
+    bathrooms               REAL,
+    latitude                REAL,
+    longitude               REAL
+);
+
 CREATE TABLE IF NOT EXISTS calendar (
-    listing_id                  INTEGER,
-    date                        DATE,
-    available                   TEXT,
-    price                       REAL,
-    adjusted_price              REAL,
-    minimum_nights              INTEGER,
-    maximum_nights              INTEGER,
-    city_key                    TEXT,
-    city_display                TEXT,
-    FOREIGN KEY (listing_id)    REFERENCES listings(listing_id)
+    calendar_id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    listing_id              INTEGER,
+    date                    TEXT,
+    available               TEXT,
+    price                   REAL,
+    adjusted_price          REAL,
+    minimum_nights          INTEGER,
+    maximum_nights          INTEGER
 );
 
------------------------
--- TABLE: reviews
------------------------
 CREATE TABLE IF NOT EXISTS reviews (
-    review_id                   INTEGER PRIMARY KEY,
-    listing_id                  INTEGER,
-    reviewer_id                 INTEGER,
-    reviewer_name               TEXT,
-    comments                    TEXT,
-    date                        DATE,
-    city_key                    TEXT,
-    city_display                TEXT,
-    FOREIGN KEY (listing_id)    REFERENCES listings(listing_id)
+    review_id               INTEGER PRIMARY KEY,
+    listing_id              INTEGER,
+    reviewer_id             INTEGER,
+    reviewer_name           TEXT,
+    comments                TEXT,
+    date                    TEXT
 );
 
 
------------------------
--- INDEXES
------------------------
-CREATE INDEX IF NOT EXISTS idx_calendar_listing_date
-    ON calendar(listing_id,date);
+/*===========================================================
+  4. INDEXES
+===========================================================*/
+
+CREATE INDEX IF NOT EXISTS idx_raw_calendar_listing_date
+    ON calendar_raw(listing_id, date);
+
+CREATE INDEX IF NOT EXISTS idx_raw_reviews_listing
+    ON reviews_raw(listing_id);
+
+CREATE INDEX IF NOT EXISTS idx_listings_city
+    ON listings(city_display);
+
+CREATE INDEX IF NOT EXISTS idx_calendar_listing
+    ON calendar(listing_id);
 
 CREATE INDEX IF NOT EXISTS idx_reviews_listing
     ON reviews(listing_id);
- 

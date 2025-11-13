@@ -31,7 +31,7 @@ import pandas as pd
 with open("etl_config.json","r", encoding="utf-8") as f:
     config = json.load(f)
 
-INTERIM_DIR = config["output_path"]
+INTERIM_DIR = config["interim_path"]
 MASTER_PATH = os.path.join(INTERIM_DIR,"listings_master_v1.parquet")
 
 def run_data_quality_check(threshold: float = 0.2):

@@ -22,7 +22,7 @@ CONFIG_PATH = "etl_config.json"
 with open(CONFIG_PATH, "r", encoding="utf-8") as f:
     config = json.load(f)
 
-INTERIM_DIR = config["output_path"] 
+INTERIM_DIR = config["interim_path"] 
 OUTPUT_FILE = os.path.join(INTERIM_DIR, "str_market_with_amenities_v1.parquet")
 
 def run_extract_amenity_keywords():

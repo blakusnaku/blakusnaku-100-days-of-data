@@ -44,7 +44,7 @@ from scripts.verify_sql_import_analysis import run_verify_sql_import
 
 from scripts.run_sql_kpis_by_city import run_sql_kpis_by_city   
 from scripts.run_sql_kpis_by_property_type import run_sql_kpis_by_property_type
-from scripts.export_sql_kpi_results import run_eport_sql_kpis
+from scripts.export_sql_kpi_results import run_export_sql_kpis
 
 def main():
     print("=== 🚀 Starting US STR Data Pipeline ===")
@@ -85,11 +85,11 @@ def main():
     #step 12: generate kpi summary
     run_kpi_summary()
 
-    #step 13: import to sqlite database
-    run_import_to_sqlite()
-    
     #initialize database schema
     run_load_schema_sql()
+
+    #step 13: import to sqlite database
+    run_import_to_sqlite() # first import to sqlite db
 
     #step 14: verify_sql_import
     run_verify_import()
@@ -134,7 +134,7 @@ def main():
     run_sql_kpis_by_property_type()
     
     #step 28: export sql kpi results
-    run_eport_sql_kpis()
+    run_export_sql_kpis()
     
 if __name__ == "__main__":
     main()

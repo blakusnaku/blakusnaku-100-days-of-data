@@ -1,9 +1,9 @@
 {
     "project_name": "us_str_pipeline",
-    "data_path": "data/raw",
-    "output_path": "data/interim",
+    "data_path": "data/raw", 
     "interim_path": "data/interim",
     "processed_path": "data/processed",
+    "db_path": "C:/blakusnaku_analytics_projects/study_blocks/us_short_term_rental_data_pipeline/data/str_market.db",
     "log_path": "logs",
     "cities": [
         {

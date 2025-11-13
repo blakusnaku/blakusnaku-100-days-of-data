@@ -22,7 +22,7 @@ CONFIG_PATH = "etl_config.json"
 with open(CONFIG_PATH, "r", encoding="utf-8") as f:
     config = json.load(f)
 
-INTERIM_DIR = config["output_path"]
+INTERIM_DIR = config["interim_path"]
 
 #load dataset
 file_path = os.path.join("data","processed","str_market_ready.parquet")

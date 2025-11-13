@@ -22,7 +22,7 @@ CONFIG_PATH = "etl_config.json"
 with open(CONFIG_PATH, "r", encoding="utf-8") as f:
     config = json.load(f)
 
-INETERIM_DIR = config["output_path"]
+INETERIM_DIR = config["interim_path"]
 INPUT_FILE = os.path.join(INETERIM_DIR, "str_market_clean_v1.parquet")
 OUTPUT_FILE = os.path.join(INETERIM_DIR, "str_market_clean_v2.parquet")
 

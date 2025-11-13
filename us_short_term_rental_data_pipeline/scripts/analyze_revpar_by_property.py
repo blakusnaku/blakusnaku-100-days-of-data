@@ -21,7 +21,7 @@ CONFIG_PATH = "etl_config.json"
 with open(CONFIG_PATH, "r", encoding="utf-8") as f:
     config = json.load(f)
 
-INTERIM_DIR  =config['output_path']
+INTERIM_DIR  =config['interim_path']
 CLEAN_FILE  =os.path.join(INTERIM_DIR, "str_market_clean_v2.parquet")
 
 def run_revpar_analysis():

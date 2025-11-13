@@ -22,7 +22,8 @@ with open(CONFIG_PATH, 'r') as config_file:
     config = json.load(config_file)
 
 INTERIM_PATH = config['interim_path']
-DB_PATH = os.path.join('data', 'str_market.db')
+DB_PATH = config['db_path']
+
 PROCESSED_PATH = config['processed_path']
 OUTPUT_CSV = os.path.join(PROCESSED_PATH, "sql_output_kpi.csv")
 
@@ -53,7 +54,7 @@ GROUP BY city_display, property_type
 ORDER BY city_display, avg_revpar DESC;
 """
 
-def run_eport_sql_kpis():
+def run_export_sql_kpis():
     print("=== 📤 Exporting SQL KPI Outputs to CSV ===")
 
     if not os.path.exists(DB_PATH):
@@ -82,4 +83,4 @@ def run_eport_sql_kpis():
     print("=== ✅ export_sql_kpi_results.py complete ===\n")
 
 if __name__ == "__main__":
-    run_eport_sql_kpis()
+    run_export_sql_kpis()

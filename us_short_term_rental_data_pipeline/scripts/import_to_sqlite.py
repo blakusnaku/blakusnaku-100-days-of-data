@@ -24,7 +24,7 @@ CONFIG_PATH = "etl_config.json"
 with open(CONFIG_PATH,"r",encoding="utf-8") as f:
     config = json.load(f)
 
-INTERIM_DIR = config["output_path"]
+INTERIM_DIR = config["interim_path"]
 DB_PATH = os.path.join("data","str_market.db")
 LOG_FILE = os.path.join(config["log_path"], "run_log.json")
 INDENT = config["log_format"]["indent"]
@@ -77,7 +77,7 @@ def run_import_to_sqlite():
     # wipe existing tables when in testing mode
     if PIPELINE_STAGE == "testing":
         cur = conn.cursor()
-        for tbl in ["listings", "calendar"]:
+        for tbl in ["listings_raw", "calendar_raw"]:
             try:
                 cur.execute(f"DELETE FROM {tbl};")
                 print(f"🧹 Cleared existing data from '{tbl}' table.")
@@ -96,7 +96,7 @@ def run_import_to_sqlite():
             df = pd.read_csv(path,low_memory=False)
             if PIPELINE_STAGE == "testing":
                 df = df.head(ROW_LIMIT)
-            log_entry = import_to_sqlite(df,"listings",conn,path)
+            log_entry = import_to_sqlite(df,"listings_raw",conn,path)
             total_logs.append(log_entry)
         else:
             print(f"⚠ Missing harmonized file for {city_key}: {path}")
@@ -111,7 +111,7 @@ def run_import_to_sqlite():
             df = pd.read_parquet(path)
             if PIPELINE_STAGE == "testing":
                 df = df.head(ROW_LIMIT)
-            log_entry = import_to_sqlite(df,"calendar",conn,path)
+            log_entry = import_to_sqlite(df,"calendar_raw",conn,path)
             total_logs.append(log_entry)
         else:
             print(f"⚠ Missing calendar file for {city_key}: {path}")

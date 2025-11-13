@@ -28,7 +28,7 @@ CONFIG_PATH = "etl_config.json"
 with open(CONFIG_PATH,"r", encoding="utf-8") as f:
     config = json.load(f)
 
-INTERIM_DIR = config["output_path"]
+INTERIM_DIR = config["interim_path"]
 LOG_PATH = config["log_path"]
 INDENT = config["log_format"]["indent"]
 SORT_KEYS = config["log_format"]["sort_keys"]

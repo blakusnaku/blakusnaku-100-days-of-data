@@ -23,8 +23,8 @@ CONFIG_PATH = 'etl_config.json'
 with open(CONFIG_PATH) as f:
     config = json.load(f)
 
-INTERIM_PATH = config['output_path']
-DB_PATH = os.path.join('data', 'str_market.db')
+INTERIM_PATH = config['interim_path']
+DB_PATH = config['db_path']
 PREVIEW_OUT = os.path.join(INTERIM_PATH, 'sql_kpis_by_city_preview.csv')
 
 SQL = """

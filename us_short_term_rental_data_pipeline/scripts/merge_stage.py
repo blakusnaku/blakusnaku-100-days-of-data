@@ -32,7 +32,7 @@ CONFIG_PATH = "etl_config.json"
 with open(CONFIG_PATH, "r", encoding="utf-8") as f:
     config = json.load(f)
 
-INTERIM_DIR = config["output_path"]
+INTERIM_DIR = config["interim_path"]
 output_format = config["output_settings"]["format"]
 output_compression = config["output_settings"]["compression"]
 

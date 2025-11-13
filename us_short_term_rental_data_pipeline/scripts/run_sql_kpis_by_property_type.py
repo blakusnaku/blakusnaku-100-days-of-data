@@ -24,7 +24,7 @@ with open(CONFIG_PATH) as f:
     config = json.load(f)
 
 INTERIM_PATH = config['interim_path']
-DB_PATH = os.path.join("data", "str_market.db")
+DB_PATH = config['db_path']
 OUTPUT_PREVIEW = os.path.join(INTERIM_PATH, "sql_kpi_by_property_type_preview.csv")
 
 SQL = """
