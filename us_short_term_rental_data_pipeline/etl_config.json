@@ -1,15 +1,18 @@
 {
     "project_name": "us_str_pipeline",
-    "data_path": "data/raw", 
+    "data_path": "data/raw",
     "interim_path": "data/interim",
     "processed_path": "data/processed",
+    "transformed_path": "data/transformed",
+    "kpi_output_path": "data/kpi",
     "db_path": "C:/blakusnaku_analytics_projects/study_blocks/us_short_term_rental_data_pipeline/data/str_market.db",
     "log_path": "logs",
+
     "cities": [
         {
             "name": "new_york",
             "display_name": "New York City, NY",
-            "files": ["listings.csv.gz","calendar.csv.gz","neighbourhoods.csv"]
+            "files": ["listings.csv.gz", "calendar.csv.gz", "neighbourhoods.csv"]
         },
         {
             "name": "seattle",
@@ -22,6 +25,7 @@
             "files": ["listings.csv.gz", "calendar.csv.gz", "neighbourhoods.csv"]
         }
     ],
+
     "archived_datasets": [
         {
             "name": "los_angeles",
@@ -29,21 +33,141 @@
             "notes": "Retained for stress testing and performance benchmarking."
         }
     ],
-    "output_settings":{
+
+    "output_settings": {
         "format": "parquet",
         "compression": "snappy"
     },
-    "pipeline_mode":{
+
+    "pipeline_mode": {
         "stage": "testing",
         "row_limit": 100000,
         "description": "Controls pipeline run mode. Options: 'testing' (uses row_limit) or 'production' (full load)"
     },
+
     "log_format": {
         "indent": 2,
         "encoding": "utf-8",
         "sort_keys": true,
-        "description": "Standardized JSON format for all run_log outputs across the ETL pipeline. Ensures consistent readability and lightweight file size in version control."
+        "description": "Standardized JSON format for all run_log outputs across the ETL pipeline."
     },
-    "last_updated": "2025-11-04"
-    
+
+    "cleaning": {
+        "use_columns": {
+            "listings": [
+                "id",
+                "host_id",
+                "name",
+                "description",
+                "latitude",
+                "longitude",
+                "property_type",
+                "room_type",
+                "accommodates",
+                "bathrooms",
+                "bedrooms",
+                "beds",
+                "neighbourhood_cleansed",
+                "city",
+                "state",
+                "zipcode",
+                "price",
+                "minimum_nights",
+                "maximum_nights",
+                "availability_365",
+                "number_of_reviews",
+                "review_scores_rating",
+                "last_scraped"
+            ],
+            "calendar": [
+                "listing_id",
+                "date",
+                "available"
+            ],
+            "reviews": [
+                "listing_id",
+                "id",
+                "date",
+                "reviewer_id",
+                "comments"
+            ]
+        },
+ 
+        "cleaning_rules": {
+            "strip_whitespace": true,
+            "convert_empty_strings_to_null": true,
+            "remove_commas_from_numeric": true,
+            "drop_columns_with_all_nulls": false,
+            "normalize_column_names": true,
+            "deduplicate_rows": true,
+            "default_string_dtype": true
+        },
+
+        "dtypes": {
+            "listings": {
+                "id": "int",
+                "host_id": "int",
+                "name": "string",
+                "description": "string",
+                "latitude": "float",
+                "longitude": "float",
+                "property_type": "string",
+                "room_type": "string",
+                "accommodates": "int",
+                "bathrooms": "float",
+                "bedrooms": "int",
+                "beds": "int",
+                "neighbourhood_cleansed": "string",
+                "city": "string",
+                "state": "string",
+                "zipcode": "string",
+                "price": "float",
+                "minimum_nights": "int",
+                "maximum_nights": "int",
+                "availability_365": "int",
+                "number_of_reviews": "int",
+                "review_scores_rating": "float",
+                "last_scraped": "date"
+            },
+
+            "calendar": {
+                "listing_id": "int",
+                "date": "date",
+                "available": "bool"
+            },
+
+            "reviews": {
+                "listing_id": "int",
+                "id": "int",
+                "reviewer_id": "int",
+                "date": "date",
+                "comments": "string"
+            }
+        }
+    },
+    "simulated_pricing": {
+        "base_adr_by_room_type": {
+            "Entire home/apt": 130,
+            "Private room": 70,
+            "Hotel room": 110,
+            "Shared room": 40
+        },
+        "default_base_adr": 90,
+
+        "city_multiplier": {
+            "new_york": 1.40,
+            "seattle": 1.15,
+            "portland": 0.95
+        },
+
+        "bedroom_adjustment_per_room": 12,
+        "accommodates_adjustment_per_guest_over_2": 4,
+
+        "review_rating_adjustment": {
+            "high": 1.10,
+            "mid": 1.00,
+            "low": 0.90
+        }
+    },
+    "last_updated": "2025-11-20"
 }

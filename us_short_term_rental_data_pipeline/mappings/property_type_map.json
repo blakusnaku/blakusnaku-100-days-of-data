@@ -1,0 +1,19 @@
+{
+  "Entire rental unit": "entire_home",
+  "Entire condominium": "entire_home",
+  "Entire condo": "entire_home",
+  "Entire apartment": "entire_home",
+  "Entire loft": "entire_home",
+  "Entire townhouse": "entire_home",
+
+  "Private room": "private_room",
+  "Private room in apartment": "private_room",
+  "Private room in condo": "private_room",
+  "Private room in house": "private_room",
+
+  "Shared room": "shared_room",
+  "Shared room in condo": "shared_room",
+  "Shared room in apartment": "shared_room",
+
+  "Hotel room": "hotel_room"
+}

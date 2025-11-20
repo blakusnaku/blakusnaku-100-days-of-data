@@ -1,0 +1,14 @@
+{
+  "new_york": {
+    "city": "New York",
+    "state": "NY"
+  },
+  "seattle": {
+    "city": "Seattle",
+    "state": "WA"
+  },
+  "portland": {
+    "city": "Portland",
+    "state": "OR"
+  }
+}
