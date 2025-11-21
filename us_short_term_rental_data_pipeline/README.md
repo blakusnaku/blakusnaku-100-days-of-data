@@ -6,6 +6,12 @@
 
 ---
 
+## 📊 Dashboard Preview
+
+![Short Term Rental Dashboard](https://github.com/blakusnaku/blakusnaku-100-days-of-data/blob/main/us_short_term_rental_data_pipeline/assets/us_short_term_rental_dashboard_screenshot.PNG)
+
+---
+
 ## 🧠 Overview  
 The **US STR Pipeline** is a multi-city ETL system built using **InsideAirbnb** datasets to automate the process of cleaning, validating, merging, and transforming short-term rental data for KPI tracking.  
 
